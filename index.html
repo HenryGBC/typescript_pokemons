@@ -3,8 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-    <script src="js/types.js"></script>
+    
+    <div class="content">
+        <div class="pokemon">
+            <img src="img/pikachu.png" alt="">
+        </div>
+        
+        <div class="pokedex">
+            <img src="img/pikachu.png" alt="">
+            <div class="description">
+                <span id="name">Pickachu</span>
+                <span id="type">Electrico</span>
+                <span id="height">2.2<span>m</span></span>
+                <span id="weight">2.2 <span>kg</span></span>
+            </div>
+        </div>
+        
+        <div class="pokeball">
+            <img src="img/pokeball.png" alt="">
+        </div>
+        
+    </div>
+    <script data-main="./js/main.js" src="js/require.js"></script>
+    
+    <script>
+        requirejs.config({
+            baseUrl: 'js',
+            paths: {
+                app: 'js'
+            }
+        });
+
+    </script>
 </body>
 </html>
