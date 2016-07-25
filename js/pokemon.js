@@ -1,13 +1,14 @@
 define(["require", "exports"], function (require, exports) {
     "use strict";
     var Pokemon = (function () {
-        function Pokemon(type, name, pc, height, weight) {
+        function Pokemon(type, name, pc, height, weight, image) {
             this.type = type;
             this.name = name;
             this.pc = pc;
             this.height = height;
             this.weight = weight;
             this.catched = false;
+            this.image = image;
         }
         Pokemon.prototype.getType = function () {
             return this.type;
@@ -29,6 +30,9 @@ define(["require", "exports"], function (require, exports) {
         };
         Pokemon.prototype.getCatched = function () {
             return this.catched;
+        };
+        Pokemon.prototype.getImage = function () {
+            return this.image;
         };
         return Pokemon;
     }());

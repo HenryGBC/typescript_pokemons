@@ -4,18 +4,19 @@
 //var Pokemon = module("Pokemon");
 
 import {Pokemon} from './pokemon';
+import {pokemonsArray} from './pokemons_list';
+import {Control} from './control';
 
-import {IPokemon} from './ipokemon';
 
-let poke:IPokemon;
-poke = {
-    type: 'volador',
-    name: 'pidgey',
-    pc: 25,
-    height: 2.5,
-    weight: 2.3,
-    catched: false 
+let pokemons:Array<Pokemon>;
+pokemons = [];
+//var pokemon = new Pokemon(poke.type, poke.name, poke.pc, poke.height, poke.weight);
+
+for(let pokemon of pokemonsArray){
+    pokemons.push(new Pokemon(pokemon.type, pokemon.name, pokemon.pc, pokemon.height, pokemon.weight, pokemon.image))
 }
-var pokemon = new Pokemon(poke.type, poke.name, poke.pc, poke.height, poke.weight);
 
-console.log(pokemon);
+//instance control init
+
+let control = new Control();
+control.init(pokemons);

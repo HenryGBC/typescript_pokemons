@@ -6,4 +6,5 @@ export interface IPokemon{
     height:number;
     weight:number;
     catched:boolean;
+    image:string;
 }
