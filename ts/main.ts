@@ -20,3 +20,11 @@ for(let pokemon of pokemonsArray){
 
 let control = new Control();
 control.init(pokemons);
+
+
+
+document.getElementById("pokeball").addEventListener("click", catchPokemon);
+
+function catchPokemon() {
+    control.catch();
+}

@@ -8,5 +8,9 @@ define(["require", "exports", './pokemon', './pokemons_list', './control'], func
     }
     var control = new control_1.Control();
     control.init(pokemons);
+    document.getElementById("pokeball").addEventListener("click", catchPokemon);
+    function catchPokemon() {
+        control.catch();
+    }
 });
 //# sourceMappingURL=main.js.map

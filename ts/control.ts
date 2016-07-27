@@ -32,4 +32,16 @@ export class Control {
         pokedex.weight.innerHTML = pokemon.getWeight();
     }
     
+    catch(){
+        let pokedex:any= document.getElementsByClassName('pokedex');
+        let pokemon:any= document.getElementsByClassName('pokemon');
+        this.pokemons.splice(0, 1);
+        if(this.pokemons.length>0){
+          this.setPokemon(this.pokemons[0]);  
+        }else{
+            pokedex[0].classList.add("hide");
+            pokemon[0].classList.add("hide");
+        }
+    }
+    
 }

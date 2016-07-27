@@ -24,6 +24,18 @@ define(["require", "exports"], function (require, exports) {
             pokedex.height.innerHTML = pokemon.getHeight();
             pokedex.weight.innerHTML = pokemon.getWeight();
         };
+        Control.prototype.catch = function () {
+            var pokedex = document.getElementsByClassName('pokedex');
+            var pokemon = document.getElementsByClassName('pokemon');
+            this.pokemons.splice(0, 1);
+            if (this.pokemons.length > 0) {
+                this.setPokemon(this.pokemons[0]);
+            }
+            else {
+                pokedex[0].classList.add("hide");
+                pokemon[0].classList.add("hide");
+            }
+        };
         return Control;
     }());
     exports.Control = Control;
