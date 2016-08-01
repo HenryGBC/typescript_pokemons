@@ -1,7 +1,6 @@
 /**
  * Pokemon
  */
-/// <reference path="ipokemon.ts"/>
 export class Pokemon{
     
     private type:string;

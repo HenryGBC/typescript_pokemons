@@ -23,8 +23,5 @@ control.init(pokemons);
 
 
 
-document.getElementById("pokeball").addEventListener("click", catchPokemon);
+document.getElementById("pokeball").addEventListener("click", () =>{control.catch();});
 
-function catchPokemon() {
-    control.catch();
-}
